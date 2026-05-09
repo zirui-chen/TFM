@@ -1,0 +1,27 @@
+# Corpus-level control: 3-CAMP-KG-Cycled
+# 3 synthetic KGs (each ~55K edges), cycled ~66,700 times each
+# matching ULTRA-Real's cycling pattern
+
+corpus_dir: data/corpus/control_3cycled
+out_dir:    checkpoints/control_3cycled
+
+n_steps:                 200000
+batch_size:              64
+lr:                      0.0005
+n_negatives:             64
+adversarial_temperature: 1.0
+checkpoint_every:        10000
+derived_frac:            0.5
+
+# 3 synthetic KGs: sizes ~1480, ~2120, ~1340 entities; ~52K, ~61K, ~52K edges
+generator:
+  n_kg: 3
+  use_rules: true
+  target_edge_count: 55000  # ~55K edges per KG
+
+rel_model:
+  num_layers: 6
+  hidden_dim: 32
+entity_model:
+  num_layers: 6
+  hidden_dim: 32

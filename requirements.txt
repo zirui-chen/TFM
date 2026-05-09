@@ -1,6 +1,6 @@
-torch>=2.1.0
-torch-scatter>=2.1.2
-torch-geometric>=2.4.0
-ninja
-easydict
-pyyaml
+numpy>=1.24
+scipy>=1.10
+torch>=2.0
+torch-geometric>=2.3
+pyyaml>=6.0
+tqdm>=4.65

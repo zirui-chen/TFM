@@ -1,0 +1,29 @@
+# Ablation D: No rules, fixed statistics (both axes removed)
+
+corpus_dir: data/corpus/ablation_D
+out_dir:    checkpoints/ablation_D
+
+n_steps:                 200000
+batch_size:              64
+lr:                      0.0005
+n_negatives:             64
+adversarial_temperature: 1.0
+checkpoint_every:        10000
+derived_frac:            0.5
+
+generator:
+  use_rules: false
+  fixed_stats:
+    n_ent:         1732
+    n_rel:           34
+    gamma:         2.25
+    edge_density:  12.2
+    incompleteness: 0.25
+    noise_rate:    0.05
+
+rel_model:
+  num_layers: 6
+  hidden_dim: 32
+entity_model:
+  num_layers: 6
+  hidden_dim: 32

@@ -1,0 +1,24 @@
+# CAMP-KG full configuration (Condition A in ablation)
+# Rules: all 7 templates  |  Statistics: broad priors (default)
+
+corpus_dir: data/corpus/camp_kg
+out_dir:    checkpoints/camp_kg
+
+# Training (identical to ULTRA published setup)
+n_steps:                 200000
+batch_size:              64
+lr:                      0.0005
+n_negatives:             64
+adversarial_temperature: 1.0
+checkpoint_every:        10000
+
+# Balanced query mix (50:50 derived:background)
+derived_frac: 0.5
+
+# ULTRA model (6 GNN layers, dim=32, 177K parameters)
+rel_model:
+  num_layers: 6
+  hidden_dim: 32
+entity_model:
+  num_layers: 6
+  hidden_dim: 32

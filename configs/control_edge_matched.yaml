@@ -1,0 +1,27 @@
+# Corpus-level control: Edge-Matched
+# 6 synthetic KGs totaling ~312K edges, matching ULTRA-Real's ~309K unique edges
+# Each KG is visited approximately 33,300 times during 200K steps
+
+corpus_dir: data/corpus/control_edge_matched
+out_dir:    checkpoints/control_edge_matched
+
+n_steps:                 200000
+batch_size:              64
+lr:                      0.0005
+n_negatives:             64
+adversarial_temperature: 1.0
+checkpoint_every:        10000
+derived_frac:            0.5
+
+# 6 synthetic KGs: 38K to 65K edges each, totaling ~312K
+generator:
+  n_kg: 6
+  use_rules: true
+  total_edge_budget: 312000   # ~312K edges across 6 KGs
+
+rel_model:
+  num_layers: 6
+  hidden_dim: 32
+entity_model:
+  num_layers: 6
+  hidden_dim: 32

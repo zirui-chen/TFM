@@ -1,0 +1,25 @@
+# Ablation B: No rules, varied statistics
+# Derived triples are replaced by degree-matched random edges
+# (no rule templates are applied; all triples are background-type)
+
+corpus_dir: data/corpus/ablation_B
+out_dir:    checkpoints/ablation_B
+
+n_steps:                 200000
+batch_size:              64
+lr:                      0.0005
+n_negatives:             64
+adversarial_temperature: 1.0
+checkpoint_every:        10000
+derived_frac:            0.5
+
+# Generator overrides (set in generate_corpus.py with --no_rules flag)
+generator:
+  use_rules: false        # replace derived triples with degree-matched random
+
+rel_model:
+  num_layers: 6
+  hidden_dim: 32
+entity_model:
+  num_layers: 6
+  hidden_dim: 32
