@@ -1,10 +1,5 @@
 # CAMP-KG: Corpus-as-Model Pretraining for Zero-Shot Knowledge Graph Reasoning
 
-Official code for the NeurIPS 2026 submission  
-**"Corpus-as-Model Pretraining for Zero-Shot Knowledge Graph Reasoning"**
-
----
-
 ## Overview
 
 CAMP-KG is a data-centric pretraining method for zero-shot knowledge graph (KG)
@@ -354,18 +349,6 @@ Original citations:
 - **NELL-995**: Xiong et al. (2017)
 - **Hetionet**: Himmelstein et al. (2017)
 - **InGram benchmarks**: Lee et al. (2023)
-
----
-
-## Citation
-
-```bibtex
-@inproceedings{campkg2026,
-  title     = {Corpus-as-Model Pretraining for Zero-Shot Knowledge Graph Reasoning},
-  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
-  year      = {2026},
-}
-```
 
 ---
 
